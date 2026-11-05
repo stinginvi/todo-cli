@@ -36,7 +36,7 @@ def format_todo(todo: Todo) -> str:
     """一行显示一条待办，例如： [x] 1  写 W2 复盘  #study"""
     box = "x" if todo.done else " "
     tags = "".join(f" #{tag}" for tag in todo.tags)
-    return f"[{box}] {todo.id}  {todo.title}{tags}"
+    return f"[{box}] {todo.id:>2}  {todo.title}{tags}"
 
 
 def cmd_add(store: TodoStore, args) -> int:
